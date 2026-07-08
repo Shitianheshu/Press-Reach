@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>PressReach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-TWDS3H3J');
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWDS3H3J" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="header">
+      <div class="container nav">
+        <div class="logo">
+          <img src="./Image/logo.svg" alt="PressReach Logo">
+        </div>
+        <nav class="desktop-menu">
+          <a href="#">サービス概要</a>
+          <a href="#">会社との違い</a>
+          <a href="#">FAQ</a>
+          <a href="#">価格</a>
+        </nav>
+        <div class="actions">
+          <a class="btn yellow" href="#">無料相談はこちら</a>
+          <a class="btn dark" href="#">お申し込みはこちら</a>
+        </div>
+        <div class="mobile-btn">
+          <a class="btn dark" href="#">お申し込みはこちら</a>
+        </div>
+      </div>
+      <div id="mobileMenu" class="mobile-menu hidden">
+        <a class="btn dark" href="#">お申し込みはこちら</a>
+      </div>
+    </header>
+    <section class="company-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-badge"> APPLICATION FORM </span>
+          <h2 class="section-title">お申し込みフォーム</h2>
+        </div>
+        <form class="contact-form">
+          <label class="text-red"> ※は必須項目です。 </label>
+          <div class="form-row">
+            <label> 会社名・屋号 <span>※</span>
+            </label>
+            <input type="text" name="company" placeholder="株式会社ネットリンク">
+          </div>
+          <div class="form-row">
+            <label> 会社名・屋号（カナ） <span>※</span>
+            </label>
+            <input type="text" name="name" placeholder="カブシキガイシャネットリンク">
+          </div>
+          <div class="form-row">
+            <label> 代表者 <span>※</span>
+            </label>
+            <div class="grid-3">
+              <input type="text" placeholder="姓">
+              <input type="text" placeholder="名">
+            </div>
+          </div>
+          <div class="form-row">
+            <label> 代表者（カナ） <span>※</span>
+            </label>
+            <div class="grid-3">
+              <input type="text" placeholder="セイ">
+              <input type="text" placeholder="メイ">
+            </div>
+          </div>
+          <div class="form-row">
+            <label> ご担当者 <span>※</span>
+            </label>
+            <div class="grid-3">
+              <input type="text" placeholder="姓">
+              <input type="text" placeholder="名">
+            </div>
+          </div>
+          <div class="form-row">
+            <label>ご担当者（カナ） <span>※</span>
+            </label>
+            <div class="grid-3">
+              <input type="text" placeholder="セイ">
+              <input type="text" placeholder="メイ">
+            </div>
+          </div>
+          <div class="form-row">
+            <label> 電話番号 <span>※</span>
+            </label>
+            <input type="number" placeholder="000-0000-0000">
+          </div>
+          <div class="form-row">
+            <label> 連絡先電話番号 <span>※</span>
+            </label>
+            <input type="number" placeholder="000-0000-0000">
+          </div>
+          <div class="form-row">
+            <label> 住所 <span>※</span>
+            </label>
+            <input type="text" placeholder="東京都○○区○○0-0">
+          </div>
+          <div class="form-row">
+            <label> ビル・マンション名 </label>
+            <input type="text" placeholder="ネットマンション101">
+          </div>
+          <div class="form-row">
+            <label> 取材タイプ <span>※</span>
+            </label>
+            <div class="radio-group vertical">
+              <label class="radio-item">
+                <input type="radio" name="interview_type" checked>
+                <span>WEB取材型</span>
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="interview_type">
+                <span>訪問取材型</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-row">
+            <label> お申込みプラン <span>※</span>
+            </label>
+            <div class="radio-group vertical">
+              <label class="radio-item">
+                <input type="radio" name="plan" checked>
+                <span>単発配信プラン</span>
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="plan">
+                <span>2回配信プラン</span>
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="plan">
+                <span>月1回配信プラン（12回/年）</span>
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="plan">
+                <span>フリープラン</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-row">
+            <label> 業種 <span>※</span>
+            </label>
+            <input type="text" placeholder="WEBマーケティング事業">
+          </div>
+          <div class="form-row">
+            <label> 掲載内容 <span>※</span>
+            </label>
+            <textarea rows="2" placeholder="取材してほしい、取り上げてほしい内容、
+商品・サービスなどについて記載ください"></textarea>
+          </div>
+          <div class="form-row">
+            <label> ウェブサイト </label>
+            <input type="text" placeholder="URL">
+          </div>
+          <div class="form-row">
+            <label> 備考欄 </label>
+            <textarea rows="6" placeholder=""></textarea>
+          </div>
+          <div class="form-row full">
+            <label class="checkbox">
+              <input type="checkbox" required>
+              <span>
+                <a href="#">利用規約</a>および <a href="#">プライバシーポリシー</a> を理解し同意する </span>
+            </label>
+          </div>
+          <div class="form-submit">
+            <button type="submit"> 内容確認 </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-logo">
+          <a href="#">
+            <img src="./Image/logo.svg" alt="PressReach">
+          </a>
+        </div>
+        <ul class="footer-menu">
+          <li>
+            <a href="#">会社概要</a>
+            <img src="./Image/arrow.svg" alt="Arrow">
+          </li>
+          <li>
+            <a href="#">プライバシーポリシー</a>
+            <img src="./Image/arrow.svg" alt="Arrow">
+          </li>
+          <li>
+            <a href="#">利用規約</a>
+            <img src="./Image/arrow.svg" alt="Arrow">
+          </li>
+          <li>
+            <a href="#">お問い合わせ</a>
+            <img src="./Image/arrow.svg" alt="Arrow">
+          </li>
+          <li>
+            <a href="#">プレスリリース掲載しませんか？</a>
+          </li>
+        </ul>
+        <p class="copyright"> © PressReach / NET LINK Co.,LTD. All Rights Reserved. </p>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

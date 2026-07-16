@@ -77,27 +77,50 @@
               <div>複数の <br>大手メディア <br>掲載 </div>
             </div>
         </div>
-        <div class="images">
-          <div class="img main">
-            <img src="./Image/banner-1.png" alt="Main Image">
-          </div>
-          <div class="img side">
-            <img src="./Image/banner-2.png" alt="Side Image">
-          </div>
-        </div>
+<div class="images">
+
+  <!-- MAIN IMAGE: banner-1 → banner-3 -->
+  <div class="img main">
+    <div class="image-reveal">
+      <img
+        src="./Image/banner-1.png"
+        data-next-image="./Image/banner-3.png"
+        alt="Main Image"
+      >
+    </div>
+  </div>
+
+  <!-- SIDE IMAGE: banner-2 → banner-4 -->
+  <div class="img side">
+    <div class="image-reveal">
+      <img
+        src="./Image/banner-2.png"
+        data-next-image="./Image/banner-4.png"
+        alt="Side Image"
+      >
+    </div>
+  </div>
+
+</div>
         </div>
       </div>
     </section>
     <!-- Mobile Hero -->
     <section class="mobile-hero">
-      <!-- Top Right Image -->
-      <div class="hero-top-image">
-        <img src="./Image/mobile-girl.png" alt="">
-      </div>
-      <!-- Bottom Left Image -->
-      <div class="hero-bottom-image">
-        <img src="./Image/mobile-man.png" alt="">
-      </div>
+
+<div class="hero-top-image mobile-reveal-image">
+  <div class="image-reveal">
+    <img src="./Image/banner-1.png" alt="">
+  </div>
+</div>
+
+<!-- Bottom Left Image -->
+<div class="hero-bottom-image mobile-reveal-image">
+  <div class="image-reveal">
+    <img src="./Image/banner-2.png" alt="">
+  </div>
+</div>
+
       <div class="hero-content">
         <p class="hero-subtitle"> プレスリリースを出すだけで <br> 満足していませんか？ </p>
         <h1 class="hero-title">

@@ -6,7 +6,7 @@ html {
 scroll-behavior: smooth;
 }
 .container{margin:auto;padding:0 20px;max-width:1248px}
-.header{position:absolute;width:100%;top:20px;left:0;z-index:20}
+.header{position:fixed;width:100%;top:20px;left:0;z-index:20}
 .nav{display:flex;justify-content:space-between;align-items:center;background:rgb(255 255 255 / 84%);padding:12px 20px;border-radius:50px}
 .logo{font-size:28px;font-weight:700;color:#0b64d8}
 .logo span{color:#37b9ff}
@@ -587,7 +587,8 @@ h1{font-size:38px}
 .comparison-table{display:none}
 section.hero{display:none}
 .nav{background:rgb(255 255 255 / 100%);padding:10px 16px;border-radius:0}
-.header{position:relative;top:0}
+.header{position:fixed;top:0}
+body{padding-top:62px}
 .mobile-hero{display:block}
 .about-heading h2{font-size:18px;margin:10px 0 0 0}
 .about-content p{line-height:187%}

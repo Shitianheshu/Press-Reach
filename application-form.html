@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>PressReach - Application Form</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="icon" type="image/png" href="./Image/favicon.png">
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-TWDS3H3J');
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWDS3H3J" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="header">
+      <div class="container nav">
+        <div class="logo">
+          <a href="/">
+          <img src="./Image/logo.svg" alt="PressReach Logo">
+          </a>
+        </div>
+        <nav class="desktop-menu">
+          <a href="/#aboutus">PressReach（プレスリーチ）とは？</a>
+          <a href="/#comparison">他社プレスリリースサービスとの違い</a>
+          <a href="/#pricing">価格</a>
+          <a href="/#faq">よくある質問</a>
+        </nav>
+        <div class="actions">
+          <a class="btn yellow" href="./pre-consultation-form.html">無料相談はこちら</a>
+          <a class="btn dark" href="./application-form.html">お申し込みはこちら</a>
+        </div>
+        <div class="mobile-btn">
+          <a class="btn dark" href="./press-release-subscription.html">お申し込みはこちら</a>
+        </div>
+      </div>
+      <div id="mobileMenu" class="mobile-menu hidden">
+        <a class="btn dark" href="./application-form.html">お申し込みはこちら</a>
+      </div>
+    </header>
+    <section class="company-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-badge"> APPLICATION FORM </span>
+          <h2 class="section-title">お申し込みフォーム</h2>
+        </div>
+		
+        <form class="contact-form" id="applicationForm" action="submit.php" method="POST">
+
+      <label class="text-red">
+        ※は必須項目です。
+      </label>
+
+      <!-- Company Name -->
+      <div class="form-row">
+        <label>
+          会社名・屋号 <span>※</span>
+        </label>
+
+        <input
+          type="text"
+          name="company"
+          placeholder="株式会社ネットリンク"
+          required>
+      </div>
+
+      <!-- Company Name Kana -->
+      <div class="form-row">
+        <label>
+          会社名・屋号（カナ） <span>※</span>
+        </label>
+
+        <input
+          type="text"
+          name="company_kana"
+          placeholder="カブシキガイシャネットリンク"
+          required>
+      </div>
+
+      <!-- Representative -->
+      <div class="form-row">
+        <label>
+          代表者 <span>※</span>
+        </label>
+
+        <div class="grid-3">
+          <input
+            type="text"
+            name="representative_last_name"
+            placeholder="姓"
+            required>
+
+          <input
+            type="text"
+            name="representative_first_name"
+            placeholder="名"
+            required>
+        </div>
+      </div>
+
+      <!-- Representative Kana -->
+      <div class="form-row">
+        <label>
+          代表者（カナ） <span>※</span>
+        </label>
+
+        <div class="grid-3">
+          <input
+            type="text"
+            name="representative_last_name_kana"
+            placeholder="セイ"
+            required>
+
+          <input
+            type="text"
+            name="representative_first_name_kana"
+            placeholder="メイ"
+            required>
+        </div>
+      </div>
+
+      <!-- Contact Person -->
+      <div class="form-row">
+        <label>
+          ご担当者 <span>※</span>
+        </label>
+
+        <div class="grid-3">
+          <input
+            type="text"
+            name="contact_last_name"
+            placeholder="姓"
+            required>
+
+          <input
+            type="text"
+            name="contact_first_name"
+            placeholder="名"
+            required>
+        </div>
+      </div>
+
+      <!-- Contact Person Kana -->
+      <div class="form-row">
+        <label>
+          ご担当者（カナ） <span>※</span>
+        </label>
+
+        <div class="grid-3">
+          <input
+            type="text"
+            name="contact_last_name_kana"
+            placeholder="セイ"
+            required>
+
+          <input
+            type="text"
+            name="contact_first_name_kana"
+            placeholder="メイ"
+            required>
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="form-row">
+        <label>
+          電話番号 <span>※</span>
+        </label>
+
+        <input
+          type="tel"
+          name="phone"
+          placeholder="000-0000-0000"
+          required>
+      </div>
+
+      <!-- Contact Phone -->
+      <div class="form-row">
+        <label>
+          連絡先電話番号 <span>※</span>
+        </label>
+
+        <input
+          type="tel"
+          name="contact_phone"
+          placeholder="000-0000-0000"
+          required>
+      </div>
+
+            <!-- Address -->
+      <div class="form-row">
+        <label>
+          住所 <span>※</span>
+        </label>
+
+        <input
+          type="text"
+          name="address"
+          placeholder="東京都○○区○○0-0"
+          required>
+      </div>
+
+      <!-- Building -->
+      <div class="form-row">
+        <label>
+          ビル・マンション名
+        </label>
+
+        <input
+          type="text"
+          name="building_name"
+          placeholder="ネットマンション101">
+      </div>
+
+      <!-- Interview Type -->
+      <div class="form-row">
+        <label>
+          取材タイプ <span>※</span>
+        </label>
+
+        <div class="radio-group vertical">
+
+          <label class="radio-item">
+            <input
+              type="radio"
+              name="interview_type"
+              value="WEB取材型"
+              checked
+              required>
+
+            <span>WEB取材型</span>
+          </label>
+
+          <label class="radio-item">
+            <input
+              type="radio"
+              name="interview_type"
+              value="訪問取材型">
+
+            <span>訪問取材型</span>
+          </label>
+
+        </div>
+      </div>
+
+      <!-- Plan -->
+      <div class="form-row">
+        <label>
+          お申込みプラン <span>※</span>
+        </label>
+
+        <div class="radio-group vertical">
+
+          <label class="radio-item">
+            <input
+              type="radio"
+              name="plan"
+              value="単発配信プラン"
+              checked
+              required>
+
+            <span>単発配信プラン</span>
+          </label>
+
+          <label class="radio-item">
+            <input
+              type="radio"
+              name="plan"
+              value="2回配信プラン">
+
+            <span>2回配信プラン</span>
+          </label>
+
+          <label class="radio-item">
+            <input
+              type="radio"
+              name="plan"
+              value="月1回配信プラン（12回/年）">
+
+            <span>月1回配信プラン（12回/年）</span>
+          </label>
+
+          <label class="radio-item">
+            <input
+              type="radio"
+              name="plan"
+              value="フリープラン">
+
+            <span>フリープラン</span>
+          </label>
+
+        </div>
+      </div>
+
+      <!-- Industry -->
+      <div class="form-row">
+        <label>
+          業種 <span>※</span>
+        </label>
+
+        <input
+          type="text"
+          name="industry"
+          placeholder="WEBマーケティング事業"
+          required>
+      </div>
+
+      <!-- Content -->
+      <div class="form-row">
+        <label>
+          掲載内容 <span>※</span>
+        </label>
+
+        <textarea
+          name="content"
+          rows="4"
+          placeholder="取材してほしい、取り上げてほしい内容、商品・サービスなどについて記載ください"
+          required></textarea>
+      </div>
+
+      <!-- Website -->
+      <div class="form-row">
+        <label>
+          ウェブサイト
+        </label>
+
+        <input
+          type="url"
+          name="website"
+          placeholder="https://example.com">
+      </div>
+
+      <!-- Remarks -->
+      <div class="form-row">
+        <label>
+          備考欄
+        </label>
+
+        <textarea
+          name="remarks"
+          rows="6"
+          placeholder=""></textarea>
+      </div>
+      
+               <!-- Terms & Privacy -->
+      <div class="form-row full">
+        <label class="checkbox">
+          <input
+            type="checkbox"
+            name="agree"
+            value="1"
+            required>
+
+          <span>
+            <a href="./terms-of-service.html" target="_blank">
+              利用規約
+            </a>
+            および
+            <a href="./privacypolicy.html" target="_blank">
+              プライバシーポリシー
+            </a>
+            を理解し同意する
+          </span>
+        </label>
+      </div>
+	  
+
+<input type="hidden" name="form_type" value="application">
+
+	  <div class="form-row full">
+    <div class="g-recaptcha"
+         data-sitekey="6LclPlgtAAAAAGahyhKQK76mkOXIETVRqkDwjB4v">
+    </div>
+
+</div>
+
+      <!-- Submit -->
+      <div class="form-submit">
+        <button type="submit">
+          内容確認
+        </button>
+      </div>
+
+    </form>
+	
+	<div id="form-message" style="margin-top:20px;"></div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-logo">
+          <a href="/">
+            <img src="./Image/logo.svg" alt="PressReach">
+          </a>
+        </div>
+        <ul class="footer-menu">
+          <li>
+            <a href="./company.html">会社概要</a>
+            <img src="./Image/arrow.svg" alt="Arrow">
+          </li>
+          <li>
+            <a href="./privacypolicy.html">プライバシーポリシー</a>
+            <img src="./Image/arrow.svg" alt="Arrow">
+          </li>
+          <li>
+            <a href="./terms-of-service.html">利用規約</a>
+            <img src="./Image/arrow.svg" alt="Arrow">
+          </li>
+          <li>
+            <a href="./application-form.html">お問い合わせ</a>
+            <img src="./Image/arrow.svg" alt="Arrow">
+          </li>
+          <li>
+            <a href="./press-release-subscription.html">プレスリリースを受信したい方</a>
+          </li>
+        </ul>
+        <p class="copyright"> © PressReach / NET LINK Co.,LTD. All Rights Reserved. </p>
+      </div>
+    </footer>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+	document.getElementById("applicationForm").addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    const response = grecaptcha.getResponse();
+
+    if (response.length === 0) {
+
+        alert("Please complete the reCAPTCHA.");
+        return;
+    }
+
+    const form = this;
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+
+        method: "POST",
+        body: formData
+
+    })
+    .then(res => res.json())
+    .then(data => {
+
+        if (data.success) {
+
+    // Hide form
+    document.getElementById("applicationForm").style.display = "none";
+
+    // Show success message
+    document.getElementById("form-message").innerHTML = `
+        <div class="success-box">
+            <h2>送信完了</h2>
+            <p>
+                お問い合わせありがとうございます。<br>
+                内容を確認のうえ、担当者よりご連絡いたします。
+            </p>
+        </div>
+    `;
+
+    grecaptcha.reset();
+
+} else {
+
+    document.getElementById("form-message").innerHTML = `
+        <div class="error-box">
+            ${data.message}
+        </div>
+    `;
+
+}
+
+    })
+    .catch(() => {
+
+        document.getElementById("form-message").innerHTML =
+            "<p style='color:red'>Something went wrong.</p>";
+
+    });
+
+});
+	</script>
+	
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+  </body>
+</html>

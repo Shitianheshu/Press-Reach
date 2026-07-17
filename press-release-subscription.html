@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>PressReach - Press Release Subscription</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="icon" type="image/png" href="./Image/favicon.png">
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-TWDS3H3J');
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWDS3H3J" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="header">
+      <div class="container nav">
+        <div class="logo">
+          <a href="/">
+          <img src="./Image/logo.svg" alt="PressReach Logo">
+          </a>
+        </div>
+        <nav class="desktop-menu">
+          <a href="/#aboutus">PressReach（プレスリーチ）とは？</a>
+          <a href="/#comparison">他社プレスリリースサービスとの違い</a>
+          <a href="/#pricing">価格</a>
+          <a href="/#faq">よくある質問</a>
+        </nav>
+        <div class="actions">
+          <a class="btn yellow" href="./pre-consultation-form.html">無料相談はこちら</a>
+          <a class="btn dark" href="./application-form.html">お申し込みはこちら</a>
+        </div>
+        <div class="mobile-btn">
+          <a class="btn dark" href="./press-release-subscription.html">お申し込みはこちら</a>
+        </div>
+      </div>
+      <div id="mobileMenu" class="mobile-menu hidden">
+        <a class="btn dark" href="./application-form.html">お申し込みはこちら</a>
+      </div>
+    </header>
+    <section class="news-support-section">
+      <div class="container">
+        <div class="news-support-wrapper">
+          <!-- Left Image -->
+          <div class="news-support-image">
+            <img src="./Image/news-support.png" alt="News Support">
+          </div>
+          <!-- Right Content -->
+          <div class="news-support-content">
+            <h2> ネタ探しならプレスリーチにお任せください！ </h2>
+            <p> プレスリリースはお客様からのプレスリリース情報を、 受信者側メディア様にそのまま配信はしません。 </p>
+            <p> お客様から受け取ったプレスリリース情報を基に必ず取材を行い、 情報の確実性、正確性を精査いたします。 </p>
+            <p> また、受信者メディア様がご興味を持っていただくように、 価値のある一次情報としてのアドバイス、 情報収集、編集を行ったうえでお届けしています。 </p>
+            <p> 受け取ったプレスリリース情報の中から、 貴社の判断で必要なものだけをご利用ください。 </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="company-section formBox">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-badge"> Press release subscription </span>
+          <h2 class="section-title">プレスリリースを受信</h2>
+        </div>
+<form class="contact-form" id="pressReleaseForm" action="submit.php" method="POST">
+
+    <input type="hidden" name="form_type" value="media_registration">
+
+    <label class="text-red">※は必須項目です。</label>
+
+    <!-- Media Name -->
+    <div class="form-row">
+        <label>メディア名 <span>※</span></label>
+        <input
+            type="text"
+            name="media_name"
+            placeholder="プレスリーチ"
+            required>
+    </div>
+
+    <!-- Media Kana -->
+    <div class="form-row">
+        <label>メディア名（カナ） <span>※</span></label>
+        <input
+            type="text"
+            name="media_name_kana"
+            placeholder="カブシキガイシャネットリンク"
+            required>
+    </div>
+
+    <!-- Media URL -->
+    <div class="form-row">
+        <label>メディアURL <span>※</span></label>
+        <input
+            type="url"
+            name="media_url"
+            placeholder="https://abcde.jp"
+            required>
+    </div>
+
+    <!-- Distribution Email -->
+    <div class="form-row">
+        <label>配信先メールアドレス <span>※</span></label>
+        <input
+            type="email"
+            name="distribution_email"
+            placeholder="abc@abcde.com"
+            required>
+    </div>
+
+    <!-- Company -->
+    <div class="form-row">
+        <label>会社名・屋号</label>
+        <input
+            type="text"
+            name="company"
+            placeholder="株式会社ネットリンク">
+    </div>
+
+    <!-- Contact -->
+    <div class="form-row">
+        <label>ご担当者 <span>※</span></label>
+
+        <div class="grid-3">
+
+            <input
+                type="text"
+                name="contact_last_name"
+                placeholder="姓"
+                required>
+
+            <input
+                type="text"
+                name="contact_first_name"
+                placeholder="名"
+                required>
+
+        </div>
+    </div>
+
+    <!-- Contact Kana -->
+    <div class="form-row">
+        <label>ご担当者（カナ） <span>※</span></label>
+
+        <div class="grid-3">
+
+            <input
+                type="text"
+                name="contact_last_name_kana"
+                placeholder="セイ"
+                required>
+
+            <input
+                type="text"
+                name="contact_first_name_kana"
+                placeholder="メイ"
+                required>
+
+        </div>
+    </div>
+
+    <!-- Contact Email -->
+    <div class="form-row">
+        <label>担当者メールアドレス</label>
+
+        <input
+            type="email"
+            name="contact_email"
+            placeholder="abc@example.com">
+    </div>
+
+    <!-- Contact Phone -->
+    <div class="form-row">
+        <label>連絡先電話番号 <span>※</span></label>
+
+        <input
+            type="tel"
+            name="contact_phone"
+            placeholder="000-0000-0000"
+            required>
+    </div>
+
+    <!-- Department -->
+    <div class="form-row">
+        <label>担当者部署</label>
+
+        <input
+            type="text"
+            name="department"
+            placeholder="営業部">
+    </div>
+
+    <!-- Zip -->
+    <div class="form-row">
+        <label>郵便番号</label>
+
+        <input
+            type="text"
+            name="zip_code"
+            placeholder="〒000-0000">
+    </div>
+
+    <!-- Address -->
+    <div class="form-row">
+        <label>住所</label>
+
+        <input
+            type="text"
+            name="address"
+            placeholder="東京都○○区○○0-0">
+    </div>
+
+    <!-- Building -->
+    <div class="form-row">
+        <label>ビル・マンション名</label>
+
+        <input
+            type="text"
+            name="building_name"
+            placeholder="ネットマンション101">
+    </div>
+
+    <!-- Phone -->
+    <div class="form-row">
+        <label>電話番号</label>
+
+        <input
+            type="tel"
+            name="phone"
+            placeholder="000-0000-0000">
+    </div>
+
+    <!-- Remarks -->
+    <div class="form-row">
+        <label>備考</label>
+
+        <textarea
+            name="remarks"
+            rows="6"></textarea>
+    </div>
+
+    <!-- Terms -->
+    <div class="form-row full">
+        <label class="checkbox">
+
+            <input
+                type="checkbox"
+                name="agree"
+                value="1"
+                required>
+
+            <span>
+
+                <a href="./terms-of-service.html" target="_blank">
+                    利用規約
+                </a>
+
+                および
+
+                <a href="./privacypolicy.html" target="_blank">
+                    プライバシーポリシー
+                </a>
+
+                を理解し同意する
+
+            </span>
+
+        </label>
+    </div>
+<input type="hidden" name="form_type" value="media_registration">
+    <div class="g-recaptcha"
+         data-sitekey="6LclPlgtAAAAAGahyhKQK76mkOXIETVRqkDwjB4v">
+    </div>
+	
+    <div class="form-submit">
+        <button type="submit">
+            内容確認
+        </button>
+    </div>
+
+</form>
+
+	<div id="form-message" style="margin-top:20px;"></div>
+	
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-logo">
+          <a href="/">
+            <img src="./Image/logo.svg" alt="PressReach">
+          </a>
+        </div>
+        <ul class="footer-menu">
+          <li>
+            <a href="./company.html">会社概要</a>
+            <img src="./Image/arrow.svg" alt="Arrow">
+          </li>
+          <li>
+            <a href="./privacypolicy.html">プライバシーポリシー</a>
+            <img src="./Image/arrow.svg" alt="Arrow">
+          </li>
+          <li>
+            <a href="./terms-of-service.html">利用規約</a>
+            <img src="./Image/arrow.svg" alt="Arrow">
+          </li>
+          <li>
+            <a href="./application-form.html">お問い合わせ</a>
+            <img src="./Image/arrow.svg" alt="Arrow">
+          </li>
+          <li>
+            <a href="./press-release-subscription.html">プレスリリースを受信したい方</a>
+          </li>
+        </ul>
+        <p class="copyright"> © PressReach / NET LINK Co.,LTD. All Rights Reserved. </p>
+      </div>
+    </footer>
+	
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+	document.getElementById("pressReleaseForm").addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    const response = grecaptcha.getResponse();
+
+    if (response.length === 0) {
+
+        alert("Please complete the reCAPTCHA.");
+        return;
+    }
+
+    const form = this;
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+
+        method: "POST",
+        body: formData
+
+    })
+    .then(res => res.json())
+    .then(data => {
+
+        if (data.success) {
+
+    // Hide form
+    document.getElementById("pressReleaseForm").style.display = "none";
+
+    // Show success message
+    document.getElementById("form-message").innerHTML = `
+        <div class="success-box">
+            <h2>送信完了</h2>
+            <p>
+                お問い合わせありがとうございます。<br>
+                内容を確認のうえ、担当者よりご連絡いたします。
+            </p>
+        </div>
+    `;
+
+    grecaptcha.reset();
+
+} else {
+
+    document.getElementById("form-message").innerHTML = `
+        <div class="error-box">
+            ${data.message}
+        </div>
+    `;
+
+}
+
+    })
+    .catch(() => {
+
+        document.getElementById("form-message").innerHTML =
+            "<p style='color:red'>Something went wrong.</p>";
+
+    });
+
+});
+	</script>
+	
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

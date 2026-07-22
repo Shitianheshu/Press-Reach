@@ -250,3 +250,110 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(changeImages, 6000);
 
 });
+
+
+/*----------------------------------------------------
+  Japanese postal code → address autofill (ZipCloud)
+-----------------------------------------------------*/
+(function () {
+  const ZIP_API = "https://zipcloud.ibsnet.co.jp/api/search";
+
+  function digitsOnly(value) {
+    return String(value || "").replace(/\D/g, "");
+  }
+
+  function formatZip(digits) {
+    if (digits.length <= 3) return digits;
+    return digits.slice(0, 3) + "-" + digits.slice(3, 7);
+  }
+
+  function findAddressInput(zipInput) {
+    const form = zipInput.closest("form");
+    if (!form) return null;
+    return form.querySelector('input[name="address"]');
+  }
+
+  async function lookupAddress(zipDigits) {
+    const url = ZIP_API + "?zipcode=" + encodeURIComponent(zipDigits);
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("Zip lookup request failed");
+    }
+    const data = await response.json();
+    if (data.status !== 200 || !data.results || !data.results.length) {
+      return null;
+    }
+    const result = data.results[0];
+    return (result.address1 || "") + (result.address2 || "") + (result.address3 || "");
+  }
+
+  function bindZipAutofill(zipInput) {
+    let lastLookup = "";
+    let timer = null;
+    let requestId = 0;
+
+    zipInput.setAttribute("inputmode", "numeric");
+    zipInput.setAttribute("autocomplete", "postal-code");
+    zipInput.setAttribute("maxlength", "8");
+
+    const runLookup = async () => {
+      const digits = digitsOnly(zipInput.value);
+      if (digits.length !== 7 || digits === lastLookup) return;
+
+      const addressInput = findAddressInput(zipInput);
+      if (!addressInput) return;
+
+      const currentRequest = ++requestId;
+      zipInput.classList.add("is-looking-up");
+      addressInput.classList.add("is-looking-up");
+
+      try {
+        const address = await lookupAddress(digits);
+        if (currentRequest !== requestId) return;
+
+        lastLookup = digits;
+        zipInput.value = formatZip(digits);
+
+        if (address) {
+          addressInput.value = address;
+          addressInput.dispatchEvent(new Event("input", { bubbles: true }));
+          addressInput.focus();
+          // Keep cursor at end so user can append street number
+          const len = addressInput.value.length;
+          addressInput.setSelectionRange(len, len);
+        }
+      } catch (error) {
+        console.warn("Postal code lookup failed:", error);
+      } finally {
+        if (currentRequest === requestId) {
+          zipInput.classList.remove("is-looking-up");
+          addressInput.classList.remove("is-looking-up");
+        }
+      }
+    };
+
+    zipInput.addEventListener("input", function () {
+      const digits = digitsOnly(zipInput.value);
+      zipInput.value = formatZip(digits);
+
+      if (timer) clearTimeout(timer);
+      if (digits.length !== 7) {
+        lastLookup = "";
+        return;
+      }
+
+      timer = setTimeout(runLookup, 250);
+    });
+
+    zipInput.addEventListener("blur", function () {
+      if (timer) clearTimeout(timer);
+      runLookup();
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document
+      .querySelectorAll('input[name="zip_code"]')
+      .forEach(bindZipAutofill);
+  });
+})();

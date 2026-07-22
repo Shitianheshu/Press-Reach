@@ -298,6 +298,7 @@ forwards;
 .form-row input,.form-row select,.form-row textarea{width:100%;height:44px;padding:10px 14px;border:1px solid #d3d3d3;border-radius:0;font-size:13px;outline:0;transition:.3s;background:#fff}
 .form-row textarea{height:auto;resize:vertical;min-height:120px}
 .form-row input:focus,.form-row select:focus,.form-row textarea:focus{border-color:#0a66d9}
+.form-row input.is-looking-up{opacity:.7;pointer-events:none}
 .form-row.full{grid-template-columns:1fr;text-align:center;margin:auto;justify-content:center;border-bottom:none;padding-bottom:0}
 .form-row.full label.checkbox{justify-content:center}
 .form-row.full label.checkbox span{color:#000}

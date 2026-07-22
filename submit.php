@@ -275,7 +275,7 @@ switch ($formType) {
             "プレスリリースを受信フォームからのご連絡ありがとうございます。\n" .
             "1～2営業日以内に弊社担当から回答させていただきますので、しばらくお待ちくださいませ。";
         $autoReplyConfig = [
-            "to" => trim($_POST["distribution_email"] ?? ""),
+            "to" => trim($_POST["contact_email"] ?? ""),
             "subject" => "【PressReach】プレスリリース受信のお申し込みを受け付けました",
             "body" =>
                 "PressReach（プレスリーチ）\n" .
